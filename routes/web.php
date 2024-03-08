@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\public\AccueilController;
+use App\Http\Controllers\public\EvenementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+Route::get('/evenements', [EvenementController::class, 'index'])->name('public.evenements');

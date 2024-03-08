@@ -59,7 +59,7 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="logo">
-                <h1><a href="index.html">FasoEvent</a></h1>
+                <h1><a href="{{ route('accueil') }}">FasoEvent</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets_public/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
