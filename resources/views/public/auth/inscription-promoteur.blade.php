@@ -109,7 +109,7 @@
             S'inscrire en tant que abonné.<a href="{{ route('public.inscription-abonne') }}" class="text-primary">Aller</a>
           </div>
           <div class="text-center mt-4 font-weight-light">
-            Avez-vous déja un compte ? <a href="login.html" class="text-primary">Se connecter</a>
+            Avez-vous déja un compte ? <a href="{{ route('public.connexion') }}" class="text-primary">Se connecter</a>
           </div>
         </form>
       </div>

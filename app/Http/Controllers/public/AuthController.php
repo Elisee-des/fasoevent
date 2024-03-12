@@ -21,4 +21,9 @@ class AuthController extends Controller
     {
         return view('public.auth.inscription-abonne');
     }
+
+    public function connexion()
+    {
+        return view('public.auth.connexion');
+    }
 }

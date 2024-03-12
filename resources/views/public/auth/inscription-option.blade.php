@@ -23,7 +23,7 @@
               </div>
 
               <div class="mt-3">
-                <a class="btn btn-block btn-primary  w-100 text-white btn-lg font-weight-medium auth-form-btn" href="../../index.html">Connexion</a>
+                <a class="btn btn-block btn-primary  w-100 text-white btn-lg font-weight-medium auth-form-btn" href="{{ route('public.connexion') }}">Connexion</a>
               </div>
 
           </form>

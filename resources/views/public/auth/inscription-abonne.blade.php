@@ -111,11 +111,11 @@
                             href="../../index.html">S'inscrire</a>
                     </div>
                     <div class="text-center mt-4 font-weight-light">
-                        Sinscrire en tant que promoteur.<a href="{{ route('public.inscription-promoteur') }}"
+                        S'inscrire en tant que promoteur.<a href="{{ route('public.inscription-promoteur') }}"
                             class="text-primary">Aller</a>
                     </div>
                     <div class="text-center mt-4 font-weight-light">
-                        Avez-vous déja un compte ? <a href="login.html" class="text-primary">Se connecter</a>
+                        Avez-vous déja un compte ? <a href="{{ route('public.connexion') }}" class="text-primary">Se connecter</a>
                     </div>
                 </form>
             </div>
