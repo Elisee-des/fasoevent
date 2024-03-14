@@ -8,7 +8,9 @@
         <div class="col-lg-6 d-flex align-items-center justify-content-center">
             <div class="auth-form-transparent text-left p-3">
                 <div class="brand-logo">
-                    <img src="{{ asset('assets_private/images/logo.svg') }}" alt="logo">
+                    <a href="{{ route('accueil') }}">
+                        <img src="{{ asset('assets_private/images/logo.svg') }}" alt="logo">
+                    </a>
                 </div>
                 <h4>Inscription Abonné</h4>
                 <h6 class="font-weight-light">Veuillez entré vos coordonnés pour créer un compte</h6>
@@ -115,7 +117,8 @@
                             class="text-primary">Aller</a>
                     </div>
                     <div class="text-center mt-4 font-weight-light">
-                        Avez-vous déja un compte ? <a href="{{ route('public.connexion') }}" class="text-primary">Se connecter</a>
+                        Avez-vous déja un compte ? <a href="{{ route('public.connexion') }}" class="text-primary">Se
+                            connecter</a>
                     </div>
                 </form>
             </div>
