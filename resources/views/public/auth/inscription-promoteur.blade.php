@@ -14,7 +14,8 @@
         </div>
         <h4>Inscription Promoteur</h4>
         <h6 class="font-weight-light">Veuillez entré vos coordonnés pour créer un compte</h6>
-        <form class="pt-3">
+        <form class="pt-3" action="{{ route('public.inscription-promoteur-action') }}" method="POST">
+          @csrf
           <div class="form-group">
             <label>Nom complet</label>
             <div class="input-group">
@@ -23,8 +24,12 @@
                   <i class="mdi mdi-account-outline text-primary"></i>
                 </span>
               </div>
-              <input type="text" class="form-control form-control-lg border-left-0"
+              <input type="text" name="nomcomplet" class="form-control form-control-lg border-left-0"
                 placeholder="Entrez votre nom complet">
+              {{-- @if ($errors->has('nomcomplet'))
+              <span class="text-danger">{{ $errors->first('nomcomplet') }}</span>
+              @endif --}}
+
             </div>
           </div>
           <div class="form-group">
@@ -35,7 +40,11 @@
                   <i class="mdi mdi-email-outline text-primary"></i>
                 </span>
               </div>
-              <input type="email" class="form-control form-control-lg border-left-0" placeholder="Entrez votre email">
+              <input type="email" name="email" class="form-control form-control-lg border-left-0"
+                placeholder="Entrez votre email">
+              @if ($errors->has('email'))
+              <span class="text-danger">{{ $errors->first('email') }}</span>
+              @endif
             </div>
           </div>
           <div class="form-group">
@@ -46,8 +55,11 @@
                   <i class="mdi mdi-lock-outline text-primary"></i>
                 </span>
               </div>
-              <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword"
-                placeholder="Entrez votre mot de passe">
+              <input type="password" name="password" class="form-control form-control-lg border-left-0"
+                id="exampleInputPassword" placeholder="Entrez votre mot de passe">
+              @if ($errors->has('password'))
+              <span class="text-danger">{{ $errors->first('password') }}</span>
+              @endif
             </div>
           </div>
           <div class="form-group">
@@ -58,8 +70,11 @@
                   <i class="mdi mdi-lock-outline text-primary"></i>
                 </span>
               </div>
-              <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputAdresse"
-                placeholder="Entrez votre adresse">
+              <input type="text" name="adresse" class="form-control form-control-lg border-left-0"
+                id="exampleInputAdresse" placeholder="Entrez votre adresse">
+              @if ($errors->has('adresse'))
+              <span class="text-danger">{{ $errors->first('adresse') }}</span>
+              @endif
             </div>
           </div>
           <div class="form-group">
@@ -70,7 +85,11 @@
                   <i class="mdi mdi-lock-outline text-primary"></i>
                 </span>
               </div>
-              <input type="text" class="form-control form-control-lg border-left-0" placeholder="Entrez votre siège">
+              <input type="text" name="siege" class="form-control form-control-lg border-left-0"
+                placeholder="Entrez votre siège">
+              @if ($errors->has('siege'))
+              <span class="text-danger">{{ $errors->first('siege') }}</span>
+              @endif
             </div>
           </div>
           <div class="form-group">
@@ -81,8 +100,11 @@
                   <i class="mdi mdi-lock-outline text-primary"></i>
                 </span>
               </div>
-              <input type="number" class="form-control form-control-lg border-left-0"
+              <input type="text" name="telephone" class="form-control form-control-lg border-left-0"
                 placeholder="Entrez votre telephone">
+              @if ($errors->has('telephone'))
+              <span class="text-danger">{{ $errors->first('telephone') }}</span>
+              @endif
             </div>
           </div>
           <div class="form-group">
@@ -93,8 +115,11 @@
                   <i class="mdi mdi-lock-outline text-primary"></i>
                 </span>
               </div>
-              <textarea name="" class="form-control form-control-lg border-left-0"
+              <textarea name="activites" class="form-control form-control-lg border-left-0"
                 placeholder="Entrez vos domaines d'activités" id="" cols="10" rows="5"></textarea>
+              @if ($errors->has('activites'))
+              <span class="text-danger">{{ $errors->first('activites') }}</span>
+              @endif
             </div>
           </div>
 
@@ -107,8 +132,8 @@
             </div>
           </div>
           <div class="mt-3">
-            <a class="btn btn-block  w-100 text-white btn-primary btn-lg font-weight-medium auth-form-btn"
-              href="../../index.html">S'inscrire</a>
+            <button class="btn btn-block  w-100 text-white btn-primary btn-lg font-weight-medium auth-form-btn"
+              type="submit">S'inscrire</button>
           </div>
           <div class="text-center mt-4 font-weight-light">
             S'inscrire en tant que abonné.<a href="{{ route('public.inscription-abonne') }}"
